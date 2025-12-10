@@ -6,4 +6,12 @@ module.exports = {
   port: number('PORT'),
   appName: 'APP_NAME',
   allowOriginUrl: 'ALLOW_ORIGIN_URL',
+  database: {
+    type: 'DATABASE_TYPE',
+    host: 'DATABASE_HOST',
+    port: number('DATABASE_PORT'),
+    username: 'DATABASE_USERNAME',
+    password: 'DATABASE_PASSWORD',
+    dbName: 'DATABASE_DB_NAME',
+  },
 };
