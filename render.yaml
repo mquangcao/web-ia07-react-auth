@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: turborepo-backend
+    name: web-ia07-react-auth-backend
     runtime: docker
-    repo: https://github.com/mquangcao/<>
+    repo: https://github.com/mquangcao/web-ia07-react-auth
     buildFilter:
       paths:
         - apps/api/**
@@ -11,9 +11,9 @@ services:
     dockerfilePath: ./apps/api/Dockerfile
 
   - type: web
-    name: turborepo-frontend
+    name: web-ia07-react-auth
     runtime: docker
-    repo: https://github.com/mquangcao/<>
+    repo: https://github.com/mquangcao/web-ia07-react-auth
     buildFilter:
       paths:
         - apps/web/**
@@ -23,7 +23,7 @@ services:
     envVars:
       - key: VITE_API_BASE_URL
         fromService:
-          name: turborepo-backend
+          name: web-ia07-react-auth-backend
           type: web
           property: host
 version: '1'
